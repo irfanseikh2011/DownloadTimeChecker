@@ -146,6 +146,23 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+footer {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+footer nav {
+  opacity: 0.75;
+}
+
+footer nav span {
+  opacity: 1;
+}
+
+
 .select:hover {
     background-color: #2bd1f2;
 }
