@@ -67,6 +67,11 @@ function timeCalculator(result) {
   let hour = 0;
   let sec = 0;
 
+  if (result < 1) {
+    time = 0 + " sec";
+    return time;
+  }
+
   if (result <= 60) {
     sec = result;
     time = sec + " secs";
@@ -113,6 +118,7 @@ function getTotalTime() {
   let fileType = getSelectFile();
   let result = 0;
 
+  //kbps
   if (speedType === "Kbp/s" && fileType === "mb") {
     file = file * 1024;
     result = file / speed;
@@ -124,6 +130,35 @@ function getTotalTime() {
     result = timeCalculator(result);
   } else if (speedType === "Kbp/s" && fileType === "tb") {
     file = file * (1024 * 1024 * 1024);
+    result = file / speed;
+    result = timeCalculator(result);
+  }
+
+  //mbps
+  if (speedType === "Mbp/s" && fileType === "mb") {
+    result = file / speed;
+    result = timeCalculator(result);
+    console.log(result);
+  } else if (speedType === "Mbp/s" && fileType === "gb") {
+    file = file * 1024;
+    result = file / speed;
+    result = timeCalculator(result);
+  } else if (speedType === "Mbp/s" && fileType === "tb") {
+    file = file * (1024 * 1024);
+    result = file / speed;
+    result = timeCalculator(result);
+  }
+
+  //gbps
+  if (speedType === "Gbp/s" && fileType === "mb") {
+    result = file / (speed * 1024);
+    result = timeCalculator(result);
+    console.log(result);
+  } else if (speedType === "Gbp/s" && fileType === "gb") {
+    result = file / speed;
+    result = timeCalculator(result);
+  } else if (speedType === "Gbp/s" && fileType === "tb") {
+    file = file * 1024;
     result = file / speed;
     result = timeCalculator(result);
   }
