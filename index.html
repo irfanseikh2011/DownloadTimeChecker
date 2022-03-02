@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAPP - Download Time</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sticky">
+        <div class="bubbles">
+            <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          
+        </div>
+      </section>
+
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-dark mb-5" style="background-color: #474b4e63;" >
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="#">
+            <img src="speed.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            ZAPP
+          </a>
+          <div class="faq">
+              <a class="nav-item text-white" href="#">
+                  FAQ
+              </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="align-top mb-3">
+        <h1 class="text-white text-center">Download Time Checker</h1>
+      </div>
+
+      <!-- body -->
+      <div class="container-fluid d-flex flex-column justify-content-center">
+          <div class="container h-50 w-50 d-flex flex-column justify-content-center">
+            <div class="card w-100 text-center">
+                <div class="card-body">
+                 <h4>Enter your download speed below.</h4>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="input-group mb-3 w-75">
+                        <button id="but-plus" class="btn btn-outline-info" type="button">+</button>
+                        <input id="speed-input" type="number" class="form-control" placeholder="Download Speed.." aria-label="Example text with two button addons">
+                        <button id="but-minus" class="btn btn-outline-info" type="button">-</button>
+                        <!-- <button id="speed-toggle" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Speed Type</button> -->
+                        <select id="selectSpeed" class="select">
+                            <option value="Kbp/s" >Kbp/s</option>
+                            <option value="Mbp/s" selected>Mbp/s</option>
+                            <option value="Gbp/s">Gbp/s</option>
+                        </select>
+
+
+                      </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a class="text-decoration-none" href="https://www.speedtest.net/" target="_blank"><h6 class="text-dark text-center w-75 text-hover">Check your speed.</h6></a>
+                </div>
+               
+              </div>
+
+
+              <div class="card w-100 text-center mt-3">
+                <div class="card-body">
+                 <h4>Enter your File size below.</h4>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="input-group mb-3 w-75">
+                        <button id="file-but-plus" class="btn btn-outline-info" type="button">+</button>
+                        <input id="file-input" type="number" class="form-control" placeholder="File size.." aria-label="Example text with two button addons">
+                        <button id="file-but-minus" class="btn btn-outline-info" type="button">-</button>
+                        <select id="selectFile" class="select">
+                            <option value="mb" >mb</option>
+                            <option value="gb" selected>gb</option>
+                            <option value="tb">tb</option>
+                        </select>
+                      </div>
+                </div>
+                <button id="but-cal" class="btn btn-lg btn-info m-2 text-white">Calculate</button>
+              </div>
+
+             
+
+
+              <div id="calculate" class="card w-100 text-center mt-3">
+                <div id="cardCalculate" class="card-body">
+
+                </div>
+              </div>
+
+
+          </div>
+            
+    <script src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
